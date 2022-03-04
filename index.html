@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TP3</title>
+</head>
+<body>
+    <header>
+        <picture class="header__picture">
+            <source srcset="images/bandeau_600.jpg" media="(max-width:600px)">
+            <source srcset="images/bandeau_1200.jpg" media="(min-width:601px)">
+            <img class="image" src="images/bandeau_600.jpg" alt="Bandeau d'entête: Concours ICI Première. Voyage de rêve. Au menu. Écoutez Gravel le Matin en semaine 5h30 au 95,1. Courez la chance de gagner un crédit voyage de 20 000$ ! Commandité par Ici Première, Montréal en Lumière, Bell et Voyages Traditours circuits et croisières.">
+        </picture>
+    </header> 
+    <main>
+        <h1 id="titre_principal">Concours</h1>
+        <p id="intro">Complétez le coupon de participation et répondez à la question du jour ci-dessous.</p>
+        <p id="intro">30 finalistes accompagnés seront invités le jeudi 1er mars au restaurant Blumenthal pour un petit déjeuner préparé par le chef Rémi Brunelle. Parmi les finalistes présents, un grand gagnant s’envolera vers la destination de son choix!</p>
+        <p id="intro">Vous avez jusqu'au vendredi 9 février à midi pour participer. Bonne chance à tous!</p>
+
+        <form>
+            <fieldset>
+                <legend>Coupon de participation</legend>
+                <fieldset>
+                    <legend>Nom complet</legend>
+                
+                </fieldset>
+                <fieldset>
+                    <legend>Téléphone (indicatif - numéro)</legend>
+                
+                </fieldset>
+            </fieldset>
+            <fieldset>
+                <legend>Question du jour</legend>
+                <fieldset>
+                    <legend>Date à laquelle la question à été posée?</legend>
+
+                </fieldset>
+                <fieldset>
+                    <legend>Lequel de ces monuments est un mausolée?</legend>
+
+                </fieldset>
+            </fieldset>   
+            <fieldset>
+                <p>
+                    <input type="checkbox" name="lecture_reglements" value="accepte" id="accepte">
+                    <label for="accepte">j'ai lu et j'accepte <a href="">le règlement du concours</a> et je confirme avoir atteint l'âge de majorité dans ma province de résidence. </label>
+                </p>
+                <p>Avertissement SVP, acceptez le règlement du concours.</p>
+                <p>
+                    <input type="checkbox" name="recevoir_documentation" value="accepte" id="accepte">
+                    <label for="accepte">Oui, j'accepte de recevoir la documentation de Radio-Canada.</label>
+                </p>
+                <button>Enregistrer</button>
+            </fieldset>
+        </form>
+    </main>
+    <footer>
+
+   </footer>
+</body>
+</html>

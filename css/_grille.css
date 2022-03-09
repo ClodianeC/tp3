@@ -62,30 +62,30 @@
 
 /*** AJOUT pour TP3 ***/
 
-.nomcomplet .rangee,
-.telephone .rangee,
-.date .rangee{
+#nom-complet .rangee,
+#telephone .rangee,
+#date .rangee{
     display:flex;
     justify-content: space-between;
     align-items:stretch; /* valeur par défaut */
     flex-wrap: wrap;
 }
 
-.nomcomplet .cols_6_de_12 {
+#nomcomplet .cols_6_de_12 {
     flex-basis: 49%;
 }
-.telephone .cols_1_de_12 {
+#telephone .cols_1_de_12 {
     flex-basis: 6.5%;
 }
-.telephone .cols_2_de_12 {
+#telephone .cols_2_de_12 {
     flex-basis: 15%;
 }
-.telephone .cols_3_de_12 {
+#telephone .cols_3_de_12 {
     flex-basis: 23.5%;
 }
-.telephone .cols_8_de_12 {
+#telephone .cols_8_de_12 {
     flex-basis: 66%;
 }
-.date .cols_4_de_12 {
+#date .cols_4_de_12 {
     flex-basis: 32%;
 }

@@ -5,8 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TP3-Formulaire accessible</title>
+    <link rel="stylesheet" href="css/styles.css">
 </head>
-<body>
+<body class="conteneur">
     <header id="entete" role="header">
         <picture class="header__picture">
             <source srcset="images/bandeau_600.jpg" media="(max-width:600px)">
@@ -14,7 +15,7 @@
             <img class="image" src="images/bandeau_600.jpg" alt="Bandeau d'entête: Concours ICI Première. Voyage de rêve. Au menu. Écoutez Gravel le Matin en semaine 5h30 au 95,1. Courez la chance de gagner un crédit voyage de 20 000$ ! Commandité par Ici Première, Montréal en Lumière, Bell et Voyages Traditours circuits et croisières.">
         </picture>
     </header> 
-    <main role="texte" class="rangee conteneur">
+    <main role="texte" class="rangee">
         <h1 id="intro_titre_principal">Concours</h1>
         <section id="intro">
             <p id="intro_texte">Complétez le coupon de participation et répondez à la question du jour ci-dessous.</p>
@@ -236,7 +237,7 @@
                     <p id="erreur">Avertissement, veuillez répondre à la question du jour.</p>
                 </fieldset>
             </fieldset> 
-              
+
             <fieldset id="confirmation">
                 <div id="reglements" class="ctnValidation">
                     <p>

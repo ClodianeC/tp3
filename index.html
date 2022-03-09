@@ -24,9 +24,9 @@
         
         <form id="formulaire">
             <fieldset id="contact">
-                <legend id="etiquette">Coupon de participation</legend>
+                <legend id="etiquette"><h2>Coupon de participation</h2></legend>
                 <fieldset id="nom-complet" class="ctnValidation rangee">
-                    <legend id="etiquette">Nom complet</legend>
+                    <legend id="etiquette"><h3>Nom complet</h3></legend>
                     <p class="input">
                         <label for="prenom">Prénom </label>
                         <input type="text" name="prenom" id="prenom" required pattern="^[A-Za-zÀ-ÿ ,.'-]+$" title="Chaîne de charactères alphabétiques">
@@ -142,7 +142,7 @@
                 
 
                 <fieldset id="telephone" class="ctnValidation rangee">
-                    <legend id="etiquette">Téléphone (indicatif - numéro)</legend>
+                    <legend id="etiquette"><h3>Téléphone (indicatif - numéro)</h3></legend>
                     <p class="input">
                         <label for="indicatif">Indicatif </label>
                         <input type="number" name="indicatif" id="indicatif" required max="999">
@@ -155,10 +155,11 @@
                     <p id="avertissement">Avertissement, le numéro te téléphone ne doit pas comporter d'espace ou de trait d'union.</p>
                 </fieldset>
             </fieldset>
+
             <fieldset id="concours">
-                <legend id="etiquette">Question du jour</legend>
+                <legend id="etiquette"><h2>Question du jour</h2></legend>
                 <fieldset id="date" class="ctnValidation rangee">
-                    <legend>Date à laquelle la question à été posée?</legend>
+                    <legend><h3>Date à laquelle la question à été posée?</h3></legend>
                     <p class="input">
                         <label for="jour">Jour </label>
                         <input type="number" name="jour" id="jour" required min="1" max="31">
@@ -188,7 +189,7 @@
                     <p id="avertissement">Avertissement, SVP, entrez une date complète.</p>
                 </fieldset>
                 <fieldset id="question" class="ctnValidation rangee">
-                    <legend id="etiquette">Lequel de ces monuments est un mausolée?</legend>
+                    <legend id="etiquette"><h3>Lequel de ces monuments est un mausolée?</h3></legend>
                     <ul>
                         <li>
                             <input type="radio" name="monument" value="chateauIf" id="chateauIf" required class="screen-reader-only">

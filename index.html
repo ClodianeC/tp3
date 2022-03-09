@@ -14,9 +14,9 @@
             <img class="image" src="images/bandeau_600.jpg" alt="Bandeau d'entête: Concours ICI Première. Voyage de rêve. Au menu. Écoutez Gravel le Matin en semaine 5h30 au 95,1. Courez la chance de gagner un crédit voyage de 20 000$ ! Commandité par Ici Première, Montréal en Lumière, Bell et Voyages Traditours circuits et croisières.">
         </picture>
     </header> 
-    <main role="texte">
+    <main role="texte" class="rangee conteneur">
+        <h1 id="intro_titre_principal">Concours</h1>
         <section id="intro">
-            <h1 id="intro_titre_principal">Concours</h1>
             <p id="intro_texte">Complétez le coupon de participation et répondez à la question du jour ci-dessous.</p>
             <p id="intro_texte">30 finalistes accompagnés seront invités le jeudi 1er mars au restaurant Blumenthal pour un petit déjeuner préparé par le chef Rémi Brunelle. Parmi les finalistes présents, un grand gagnant s’envolera vers la destination de son choix!</p>
             <p id="intro_texte">Vous avez jusqu'au vendredi 9 février à midi pour participer. Bonne chance à tous!</p>
@@ -25,7 +25,7 @@
         <form id="formulaire">
             <fieldset id="contact">
                 <legend id="etiquette">Coupon de participation</legend>
-                <fieldset id="nom-complet">
+                <fieldset id="nom-complet" class="ctnValidation rangee">
                     <legend id="etiquette">Nom complet</legend>
                     <p class="input">
                         <label for="prenom">Prénom </label>
@@ -38,25 +38,25 @@
                     <p id="avertissement">Avertissement, le prénom ou le nom comporte un ou plusieurs caractères interdits.</p>
                 </fieldset>
 
-                <div id="adresse">
+                <div id="adresse" class="ctnValidation">
                     <p class="input">
                         <label for="adresse">Adresse </label>
                         <input type="text" name="adresse" id="adresse" required pattern="^[A-Za-zÀ-ÿ0-9 ,.'-]+$" title="Chaîne de charactères alphanumériques">
                     </p>
                     <p id="avertissement">Avertissement, l'adresse est requise.</p>
                 </div>
-                <div id="ville">
+                <div id="ville" class="ctnValidation">
                     <p class="input">
                         <label for="ville">Ville </label>
                         <input type="text" name="ville" id="ville" required pattern="^[A-Za-zÀ-ÿ ,.'-]+$" title="Chaîne de charactères alphabétiques">
                     </p>
                     <p id="avertissement">Avertissement, le nom de la ville comporte un ou plusieurs caractères interdits.</p>
                 </div>
-                <div id="region">
+                <div id="region" class="ctnValidation">
                    <p>
                         <label for="province">Province ou état </label>
                         <select name="listeprovince" id="province">
-                            <option value="n-a">Choisissez une province ou un état</option>
+                            <option value="n-a">Sélectionnez</option>
                             <option value="AB">Alberta</option>
                             <option value="BC">British Columbia</option>
                             <option value="MB">Manitoba</option>
@@ -125,14 +125,14 @@
                     </p> 
                     <p id="avertissement">Avertissement, la région d'origine doit être précisée.</p>
                 </div>
-                <div id="code-postal">
+                <div id="code-postal" class="ctnValidation">
                     <p class="input">
                         <label for="code_p">Code postal (X1X 1X1) </label>
                         <input type="text" name="code_p" id="code_p" required pattern="[A-Za-z][0-9][A-Za-z] [0-9][A-Za-z][0-9]" title="Suivant le modèle 'X1X 1X1'">
                     </p>
                     <p id="avertissement">Avertissement, le code postal doit respecter le format X1X 1X1.</p>
                 </div>
-                <div id="courriel">
+                <div id="courriel" class="ctnValidation">
                    <p class="input">
                         <label for="courriel">Courriel </label>
                         <input type="email" name="courriel" id="courriel" required>
@@ -141,7 +141,7 @@
                 </div>
                 
 
-                <fieldset id="telephone">
+                <fieldset id="telephone" class="ctnValidation rangee"></fieldset>
                     <legend id="etiquette">Téléphone (indicatif - numéro)</legend>
                     <p class="input">
                         <label for="indicatif">Indicatif </label>
@@ -157,7 +157,7 @@
             </fieldset>
             <fieldset id="concours">
                 <legend id="etiquette">Question du jour</legend>
-                <fieldset id="date">
+                <fieldset id="date" class="ctnValidation rangee">
                     <legend>Date à laquelle la question à été posée?</legend>
                     <p class="input">
                         <label for="jour">Jour </label>
@@ -166,7 +166,7 @@
                     <p>
                         <label for="mois">Mois </label>
                         <select name="mois" id="mois">
-                            <option value="n-a">Sélectionner</option>
+                            <option value="n-a">Sélectionnez</option>
                             <option value="ja">Janvier</option>
                             <option value="fe">Février</option>
                             <option value="mr">Mars</option>
@@ -187,7 +187,7 @@
                     </p>
                     <p id="avertissement">Avertissement, SVP, entrez une date complète.</p>
                 </fieldset>
-                <fieldset id="question">
+                <fieldset id="question" class="ctnValidation rangee">
                     <legend id="etiquette">Lequel de ces monuments est un mausolée?</legend>
                     <ul>
                         <li>
@@ -195,7 +195,7 @@
                             <label for="chateauIf">
                                 <picture id="img_question">
                                     <source srcset="images/chateaudIf-small.jpg" media="(max-width:600px)">
-                                    <source srcset="images/chateaudIf.jpg" media="(min-width:601px)"> -->
+                                    <source srcset="images/chateaudIf.jpg" media="(min-width:601px)">
                                     <img class="image" src="images/chateaudIf-small.jpg" alt="Le Château d'If">
                                     </picture>
                                 Le Château d'If
@@ -206,7 +206,7 @@
                             <label for="palaisLuxembourg">
                                 <picture id="img_question">
                                     <source srcset="images/palaisluxembourg-small.jpg" media="(max-width:600px)">
-                                    <source srcset="images/palaisluxembourg.jpg" media="(min-width:601px)"> -->
+                                    <source srcset="images/palaisluxembourg.jpg" media="(min-width:601px)">
                                     <img class="image" src="images/palaisluxembourg-small.jpg" alt="Le Palais du Luxembourg">
                                     </picture>
                                 Le Palais du Luxembourg
@@ -228,7 +228,7 @@
                 </fieldset>
             </fieldset>   
             <fieldset id="confirmation">
-                <div id="reglements">
+                <div id="reglements" class="ctnValidation">
                     <p>
                         <input type="checkbox" name="lecture_reglements" value="accepte" id="accepte" required>
                         <label for="accepte">J'ai lu et j'accepte <a href="">le règlement du concours</a> et je confirme avoir atteint l'âge de majorité dans ma province de résidence. </label>

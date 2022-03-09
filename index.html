@@ -29,28 +29,29 @@
                     <legend id="etiquette">Nom complet</legend>
                     <p id="input">
                         <label for="prenom">Prénom </label>
-                        <input type="text" name="prenom" id="prenom">
+                        <input type="text" name="prenom" id="prenom" required pattern="^[A-Za-zÀ-ÿ ,.'-]+$" title="Chaîne de charactères alphabétiques">
                     </p>
                     <p id="input">
                         <label for="nom">Nom </label>
-                        <input type="text" name="nom" id="nom">
+                        <input type="text" name="nom" id="nom" required required pattern="^[A-Za-zÀ-ÿ ,.'-]+$" title="Chaîne de charactères alphabétiques">
                     </p>
                     <p id="avertissement">Avertissement, le prénom ou le nom comporte un ou plusieurs caractères interdits.</p>
                 </fieldset>
 
                 <p id="input">
                     <label for="adresse">Adresse </label>
-                    <input type="text" name="adresse" id="adresse">
+                    <input type="text" name="adresse" id="adresse" required pattern="^[A-Za-zÀ-ÿ0-9 ,.'-]+$" title="Chaîne de charactères alphanumériques">
                 </p>
                 <p id="avertissement">Avertissement, l'adresse est requise.</p>
                 <p id="input">
                     <label for="ville">Ville </label>
-                    <input type="text" name="ville" id="ville">
+                    <input type="text" name="ville" id="ville" required pattern="^[A-Za-zÀ-ÿ ,.'-]+$" title="Chaîne de charactères alphabétiques">
                 </p>
                 <p id="avertissement">Avertissement, le nom de la ville comporte un ou plusieurs caractères interdits.</p>
                 <p>
                     <label for="province">Province ou état </label>
                     <select name="listeprovince" id="province">
+                        <option value="n-a">Choisissez une province ou un état</option>
                         <option value="AB">Alberta</option>
                         <option value="BC">British Columbia</option>
                         <option value="MB">Manitoba</option>
@@ -120,12 +121,12 @@
                 <p id="avertissement">Avertissement, la province ou l'état d'origine doit être précisé.</p>
                 <p id="input">
                     <label for="code_p">Code postal (X1X 1X1) </label>
-                    <input type="text" name="code_p" id="code_p">
+                    <input type="text" name="code_p" id="code_p" required pattern="[A-Za-z][0-9][A-Za-z] [0-9][A-Za-z][0-9]" title="Chaîne de charactères alphabétiques">
                 </p>
                 <p id="avertissement">Avertissement, le code postal doit respecter le format X1X 1X1.</p>
                 <p id="input">
                     <label for="courriel">Courriel </label>
-                    <input type="email" name="courriel" id="courriel">
+                    <input type="email" name="courriel" id="courriel" required>
                 </p>
                 <p id="avertissement">Avertissement, le courriel comporte un ou plusieurs caractères interdits.</p>
 
@@ -133,12 +134,12 @@
                     <legend id="etiquette">Téléphone (indicatif - numéro)</legend>
                     <p id="input">
                         <label for="indicatif">Indicatif </label>
-                        <input type="number" name="indicatif" id="indicatif">
+                        <input type="number" name="indicatif" id="indicatif" required max="999">
                     </p>
                     <p>-</p>
                     <p id="input">
                         <label for="numero">Numéro </label>
-                        <input type="number" name="numero" id="numero">
+                        <input type="number" name="numero" id="numero" required max="9999999">
                     </p>
                     <p id="avertissement">Avertissement, le numéro te téléphone ne doit pas comporter d'espace ou de trait d'union.</p>
                 </fieldset>
@@ -149,7 +150,7 @@
                     <legend>Date à laquelle la question à été posée?</legend>
                     <p id="input">
                         <label for="jour">Jour </label>
-                        <input type="number" name="jour" id="jour">
+                        <input type="number" name="jour" id="jour" required min="1" max="31">
                     </p>
                     <p>
                         <label for="mois">Mois </label>
@@ -171,7 +172,7 @@
                     </p>
                     <p id="input">
                         <label for="annee">Année </label>
-                        <input type="number" name="annee" id="annee">
+                        <input type="number" name="annee" id="annee" required>
                     </p>
                     <p id="avertissement">Avertissement, SVP, entrez une date complète.</p>
                 </fieldset>
@@ -179,14 +180,14 @@
                     <legend id="etiquette">Lequel de ces monuments est un mausolée?</legend>
                     <ul>
                         <li>
-                            <input type="radio" name="monument" value="chateauIf" id="chateauIf">
+                            <input type="radio" name="monument" value="chateauIf" id="chateauIf" required>
                             <label for="chateauIf">
                                 <!-- <picture id="img_question">
                                     <source srcset="images/chateaudIf-small.jpg" media="(max-width:600px)">
                                     <source srcset="images/chateaudIf.jpg" media="(min-width:601px)"> -->
-                                    <img class="image" src="images/chateaudIf-small.jpg" alt="Des monolithes">
+                                    <img class="image" src="images/chateaudIf-small.jpg" alt="Le Château d'If">
                                 <!-- </picture> -->
-                                Le château d'If
+                                Le Château d'If
                             </label>
                         </li>
                         <li>
@@ -195,7 +196,7 @@
                                 <!-- <picture id="img_question">
                                     <source srcset="images/palaisluxembourg-small.jpg" media="(max-width:600px)">
                                     <source srcset="images/palaisluxembourg.jpg" media="(min-width:601px)"> -->
-                                    <img class="image" src="images/palaisluxembourg-small.jpg" alt="Des monolithes">
+                                    <img class="image" src="images/palaisluxembourg-small.jpg" alt="Le Palais du Luxembourg">
                                 <!-- </picture> -->
                                 Le Palais du Luxembourg
                             </label>
@@ -206,7 +207,7 @@
                                 <!-- <picture id="img_question">
                                     <source srcset="images/tajmahal-small.jpg" media="(max-width:600px)">
                                     <source srcset="images/tajmahal.jpg" media="(min-width:601px)"> -->
-                                    <img class="image" src="images/tajmahal-small.jpg" alt="Des monolithes">
+                                    <img class="image" src="images/tajmahal-small.jpg" alt="Le Taj Mahal">
                                 <!-- </picture> -->
                                 Le Taj Mahal
                             </label>
@@ -217,7 +218,7 @@
             </fieldset>   
             <fieldset>
                 <p>
-                    <input type="checkbox" name="lecture_reglements" value="accepte" id="accepte">
+                    <input type="checkbox" name="lecture_reglements" value="accepte" id="accepte" required>
                     <label for="accepte">J'ai lu et j'accepte <a href="">le règlement du concours</a> et je confirme avoir atteint l'âge de majorité dans ma province de résidence. </label>
                 </p>
                 <p id="avertissement">Avertissement, SVP, acceptez le règlement du concours.</p>

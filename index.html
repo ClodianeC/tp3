@@ -25,17 +25,19 @@
         <form id="formulaire">
             <fieldset id="contact">
                 <legend id="etiquette"><h2>Coupon de participation</h2></legend>
-                <fieldset id="nom-complet" class="ctnValidation rangee">
+                <fieldset id="nom-complet" class="ctnValidation">
                     <legend id="etiquette"><h3>Nom complet</h3></legend>
-                    <p class="input">
-                        <label for="prenom">Prénom </label>
-                        <input type="text" name="prenom" id="prenom" required pattern="^[A-Za-zÀ-ÿ ,.'-]+$" title="Chaîne de charactères alphabétiques">
-                    </p>
-                    <p class="input">
-                        <label for="nom">Nom </label>
-                        <input type="text" name="nom" id="nom" required required pattern="^[A-Za-zÀ-ÿ ,.'-]+$" title="Chaîne de charactères alphabétiques">
-                    </p>
-                    <p id="avertissement">Avertissement, le prénom ou le nom comporte un ou plusieurs caractères interdits.</p>
+                    <div class="rangee">
+                        <p class="input">
+                            <label for="prenom">Prénom </label>
+                            <input type="text" name="prenom" id="prenom" required pattern="^[A-Za-zÀ-ÿ ,.'-]+$" title="Chaîne de charactères alphabétiques">
+                        </p>
+                        <p class="input">
+                            <label for="nom">Nom </label>
+                            <input type="text" name="nom" id="nom" required required pattern="^[A-Za-zÀ-ÿ ,.'-]+$" title="Chaîne de charactères alphabétiques">
+                        </p>
+                    </div>
+                    <p id="erreur">Avertissement, le prénom ou le nom comporte un ou plusieurs caractères interdits.</p>
                 </fieldset>
 
                 <div id="adresse" class="ctnValidation">
@@ -43,14 +45,14 @@
                         <label for="adresse">Adresse </label>
                         <input type="text" name="adresse" id="adresse" required pattern="^[A-Za-zÀ-ÿ0-9 ,.'-]+$" title="Chaîne de charactères alphanumériques">
                     </p>
-                    <p id="avertissement">Avertissement, l'adresse est requise.</p>
+                    <p id="erreur">Avertissement, l'adresse est requise.</p>
                 </div>
                 <div id="ville" class="ctnValidation">
                     <p class="input">
                         <label for="ville">Ville </label>
                         <input type="text" name="ville" id="ville" required pattern="^[A-Za-zÀ-ÿ ,.'-]+$" title="Chaîne de charactères alphabétiques">
                     </p>
-                    <p id="avertissement">Avertissement, le nom de la ville comporte un ou plusieurs caractères interdits.</p>
+                    <p id="erreur">Avertissement, le nom de la ville comporte un ou plusieurs caractères interdits.</p>
                 </div>
                 <div id="region" class="ctnValidation">
                    <p>
@@ -123,50 +125,53 @@
                             <option value="WY">Wyoming</option>
                         </select>
                     </p> 
-                    <p id="avertissement">Avertissement, la région d'origine doit être précisée.</p>
+                    <p id="erreur">Avertissement, la région d'origine doit être précisée.</p>
                 </div>
                 <div id="code-postal" class="ctnValidation">
                     <p class="input">
                         <label for="code_p">Code postal (X1X 1X1) </label>
                         <input type="text" name="code_p" id="code_p" required pattern="[A-Za-z][0-9][A-Za-z] [0-9][A-Za-z][0-9]" title="Suivant le modèle 'X1X 1X1'">
                     </p>
-                    <p id="avertissement">Avertissement, le code postal doit respecter le format X1X 1X1.</p>
+                    <p id="erreur">Avertissement, le code postal doit respecter le format X1X 1X1.</p>
                 </div>
                 <div id="courriel" class="ctnValidation">
                    <p class="input">
                         <label for="courriel">Courriel </label>
                         <input type="email" name="courriel" id="courriel" required>
                     </p>
-                    <p id="avertissement">Avertissement, le courriel comporte un ou plusieurs caractères interdits.</p> 
+                    <p id="erreur">Avertissement, le courriel comporte un ou plusieurs caractères interdits.</p> 
                 </div>
                 
 
-                <fieldset id="telephone" class="ctnValidation rangee">
+                <fieldset id="telephone" class="ctnValidation">
                     <legend id="etiquette"><h3>Téléphone (indicatif - numéro)</h3></legend>
-                    <p class="input">
-                        <label for="indicatif">Indicatif </label>
-                        <input type="number" name="indicatif" id="indicatif" required max="999">
-                    </p>
-                    <p>-</p>
-                    <p class="input">
-                        <label for="numero">Numéro </label>
-                        <input type="number" name="numero" id="numero" required max="9999999">
-                    </p>
-                    <p id="avertissement">Avertissement, le numéro te téléphone ne doit pas comporter d'espace ou de trait d'union.</p>
+                    <div class="rangee">
+                        <p class="input">
+                            <label for="indicatif">Indicatif </label>
+                            <input type="number" name="indicatif" id="indicatif" required max="999">
+                        </p>
+                        <p>-</p>
+                        <p class="input">
+                            <label for="numero">Numéro </label>
+                            <input type="number" name="numero" id="numero" required max="9999999">
+                        </p>
+                    </div>
+                    <p id="erreur">Avertissement, le numéro te téléphone ne doit pas comporter d'espace ou de trait d'union.</p>
                 </fieldset>
             </fieldset>
 
             <fieldset id="concours">
                 <legend id="etiquette"><h2>Question du jour</h2></legend>
-                <fieldset id="date" class="ctnValidation rangee">
+                <fieldset id="date" class="ctnValidation">
                     <legend><h3>Date à laquelle la question à été posée?</h3></legend>
-                    <p class="input">
-                        <label for="jour">Jour </label>
-                        <input type="number" name="jour" id="jour" required min="1" max="31">
-                    </p>
-                    <p>
-                        <label for="mois">Mois </label>
-                        <select name="mois" id="mois">
+                    <div class="rangee">
+                        <p class="input">
+                            <label for="jour">Jour </label>
+                            <input type="number" name="jour" id="jour" required min="1" max="31">
+                        </p>
+                        <p>
+                            <label for="mois">Mois </label>
+                            <select name="mois" id="mois">
                             <option value="n-a">Sélectionnez</option>
                             <option value="ja">Janvier</option>
                             <option value="fe">Février</option>
@@ -180,61 +185,65 @@
                             <option value="oc">Octobre</option>
                             <option value="no">Novembre</option>
                             <option value="de">Décembre</option>
-                        </select>
-                    </p>
-                    <p class="input">
-                        <label for="annee">Année </label>
-                        <input type="number" name="annee" id="annee" required>
-                    </p>
-                    <p id="avertissement">Avertissement, SVP, entrez une date complète.</p>
+                            </select>
+                        </p>
+                        <p class="input">
+                            <label for="annee">Année </label>
+                            <input type="number" name="annee" id="annee" required>
+                        </p>
+                    </div>
+                    <p id="erreur">Avertissement, SVP, entrez une date complète.</p>
                 </fieldset>
-                <fieldset id="question" class="ctnValidation rangee">
+                <fieldset id="question" class="ctnValidation">
                     <legend id="etiquette"><h3>Lequel de ces monuments est un mausolée?</h3></legend>
-                    <ul>
-                        <li>
-                            <input type="radio" name="monument" value="chateauIf" id="chateauIf" required class="screen-reader-only">
-                            <label for="chateauIf">
-                                <picture id="img_question">
-                                    <source srcset="images/chateaudIf-small.jpg" media="(max-width:600px)">
-                                    <source srcset="images/chateaudIf.jpg" media="(min-width:601px)">
-                                    <img class="image" src="images/chateaudIf-small.jpg" alt="Le Château d'If">
+                    <div class="rangee">
+                        <ul>
+                            <li>
+                                <input type="radio" name="monument" value="chateauIf" id="chateauIf" required class="screen-reader-only">
+                                <label for="chateauIf">
+                                    <picture id="img_question">
+                                        <source srcset="images/chateaudIf-small.jpg" media="(max-width:600px)">
+                                        <source srcset="images/chateaudIf.jpg" media="(min-width:601px)">
+                                        <img class="image" src="images/chateaudIf-small.jpg" alt="Le Château d'If">
+                                        </picture>
+                                    <span>Le Château d'If</span>
+                                </label>
+                            </li>
+                            <li>
+                                <input type="radio" name="monument" value="palaisLuxembourg" id="palaisLuxembourg" class="screen-reader-only">
+                                <label for="palaisLuxembourg">
+                                    <picture id="img_question">
+                                        <source srcset="images/palaisluxembourg-small.jpg" media="(max-width:600px)">
+                                        <source srcset="images/palaisluxembourg.jpg" media="(min-width:601px)">
+                                        <img class="image" src="images/palaisluxembourg-small.jpg" alt="Le Palais du Luxembourg">
+                                        </picture>
+                                    <span>Le Palais du Luxembourg</span>
+                                </label>
+                            </li>
+                            <li>
+                                <input type="radio" name="monument" value="tajMahal" id="tajMahal" class="screen-reader-only">
+                                <label for="tajMahal">
+                                    <picture id="img_question">
+                                        <source srcset="images/tajmahal-small.jpg" media="(max-width:600px)">
+                                        <source srcset="images/tajmahal.jpg" media="(min-width:601px)">
+                                        <img class="image" src="images/tajmahal-small.jpg" alt="Le Taj Mahal">
                                     </picture>
-                                Le Château d'If
-                            </label>
-                        </li>
-                        <li>
-                            <input type="radio" name="monument" value="palaisLuxembourg" id="palaisLuxembourg" class="screen-reader-only">
-                            <label for="palaisLuxembourg">
-                                <picture id="img_question">
-                                    <source srcset="images/palaisluxembourg-small.jpg" media="(max-width:600px)">
-                                    <source srcset="images/palaisluxembourg.jpg" media="(min-width:601px)">
-                                    <img class="image" src="images/palaisluxembourg-small.jpg" alt="Le Palais du Luxembourg">
-                                    </picture>
-                                Le Palais du Luxembourg
-                            </label>
-                        </li>
-                        <li>
-                            <input type="radio" name="monument" value="tajMahal" id="tajMahal" class="screen-reader-only">
-                            <label for="tajMahal">
-                                <picture id="img_question">
-                                    <source srcset="images/tajmahal-small.jpg" media="(max-width:600px)">
-                                    <source srcset="images/tajmahal.jpg" media="(min-width:601px)">
-                                    <img class="image" src="images/tajmahal-small.jpg" alt="Le Taj Mahal">
-                                </picture>
-                                Le Taj Mahal
-                            </label>
-                        </li>
-                    </ul>
-                    <p id="avertissement">Avertissement, veuillez répondre à la question du jour.</p>
+                                    <span>Le Taj Mahal</span>
+                                </label>
+                            </li>
+                        </ul>
+                    </div>
+                    <p id="erreur">Avertissement, veuillez répondre à la question du jour.</p>
                 </fieldset>
-            </fieldset>   
+            </fieldset> 
+              
             <fieldset id="confirmation">
                 <div id="reglements" class="ctnValidation">
                     <p>
                         <input type="checkbox" name="lecture_reglements" value="accepte" id="accepte" required>
                         <label for="accepte">J'ai lu et j'accepte <a href="">le règlement du concours</a> et je confirme avoir atteint l'âge de majorité dans ma province de résidence. </label>
                     </p>
-                    <p id="avertissement">Avertissement, SVP, acceptez le règlement du concours.</p>
+                    <p id="erreur">Avertissement, SVP, acceptez le règlement du concours.</p>
                 </div>
                 <div id="documentations">
                     <p>

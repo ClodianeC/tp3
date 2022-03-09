@@ -121,7 +121,7 @@
                 <p id="avertissement">Avertissement, la province ou l'état d'origine doit être précisé.</p>
                 <p id="input">
                     <label for="code_p">Code postal (X1X 1X1) </label>
-                    <input type="text" name="code_p" id="code_p" required pattern="[A-Za-z][0-9][A-Za-z] [0-9][A-Za-z][0-9]" title="Chaîne de charactères alphabétiques">
+                    <input type="text" name="code_p" id="code_p" required pattern="[A-Za-z][0-9][A-Za-z] [0-9][A-Za-z][0-9]" title="Suivant le modèle 'X1X 1X1'">
                 </p>
                 <p id="avertissement">Avertissement, le code postal doit respecter le format X1X 1X1.</p>
                 <p id="input">
@@ -180,35 +180,35 @@
                     <legend id="etiquette">Lequel de ces monuments est un mausolée?</legend>
                     <ul>
                         <li>
-                            <input type="radio" name="monument" value="chateauIf" id="chateauIf" required>
+                            <input type="radio" name="monument" value="chateauIf" id="chateauIf" required class="screen-reader-only">
                             <label for="chateauIf">
-                                <!-- <picture id="img_question">
+                                <picture id="img_question">
                                     <source srcset="images/chateaudIf-small.jpg" media="(max-width:600px)">
                                     <source srcset="images/chateaudIf.jpg" media="(min-width:601px)"> -->
                                     <img class="image" src="images/chateaudIf-small.jpg" alt="Le Château d'If">
-                                <!-- </picture> -->
+                                    </picture>
                                 Le Château d'If
                             </label>
                         </li>
                         <li>
-                            <input type="radio" name="monument" value="palaisLuxembourg" id="palaisLuxembourg">
+                            <input type="radio" name="monument" value="palaisLuxembourg" id="palaisLuxembourg" class="screen-reader-only">
                             <label for="palaisLuxembourg">
-                                <!-- <picture id="img_question">
+                                <picture id="img_question">
                                     <source srcset="images/palaisluxembourg-small.jpg" media="(max-width:600px)">
                                     <source srcset="images/palaisluxembourg.jpg" media="(min-width:601px)"> -->
                                     <img class="image" src="images/palaisluxembourg-small.jpg" alt="Le Palais du Luxembourg">
-                                <!-- </picture> -->
+                                    </picture>
                                 Le Palais du Luxembourg
                             </label>
                         </li>
                         <li>
-                            <input type="radio" name="monument" value="tajMahal" id="tajMahal">
+                            <input type="radio" name="monument" value="tajMahal" id="tajMahal" class="screen-reader-only">
                             <label for="tajMahal">
-                                <!-- <picture id="img_question">
+                                <picture id="img_question">
                                     <source srcset="images/tajmahal-small.jpg" media="(max-width:600px)">
-                                    <source srcset="images/tajmahal.jpg" media="(min-width:601px)"> -->
+                                    <source srcset="images/tajmahal.jpg" media="(min-width:601px)">
                                     <img class="image" src="images/tajmahal-small.jpg" alt="Le Taj Mahal">
-                                <!-- </picture> -->
+                                </picture>
                                 Le Taj Mahal
                             </label>
                         </li>

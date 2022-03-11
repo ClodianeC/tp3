@@ -16,14 +16,14 @@
         </picture>
     </header> 
     <main role="texte" class="rangee">
-        <h1 id="intro_titre_principal">Concours</h1>
-        <section id="intro">
+            <h1 id="intro_titre_principal" class="cols_12_de_12">Concours</h1>
+        <section id="intro" class="cols_4_de_12">
             <p id="intro_texte">Complétez le coupon de participation et répondez à la question du jour ci-dessous.</p>
             <p id="intro_texte">30 finalistes accompagnés seront invités le jeudi 1er mars au restaurant Blumenthal pour un petit déjeuner préparé par le chef Rémi Brunelle. Parmi les finalistes présents, un grand gagnant s’envolera vers la destination de son choix!</p>
             <p id="intro_texte">Vous avez jusqu'au vendredi 9 février à midi pour participer. Bonne chance à tous!</p>
         </section>
         
-        <form id="formulaire">
+        <form id="formulaire" class="cols_8_de_12">
             <fieldset id="contact">
                 <legend id="etiquette"><h2>Coupon de participation</h2></legend>
                 <fieldset id="nom-complet" class="ctnValidation">
@@ -35,7 +35,7 @@
                         </p>
                         <p class="input">
                             <label for="nom">Nom </label>
-                            <input type="text" name="nom" id="nom" required required pattern="^[A-Za-zÀ-ÿ ,.'-]+$" title="Chaîne de charactères alphabétiques">
+                            <input type="text" name="nom" id="nom" required pattern="^[A-Za-zÀ-ÿ ,.'-]+$" title="Chaîne de charactères alphabétiques">
                         </p>
                     </div>
                     <p id="erreur">Avertissement, le prénom ou le nom comporte un ou plusieurs caractères interdits.</p>

@@ -38,7 +38,7 @@
 /*** entête
    ========================================================================== */
 /* Padding de l'introduction */
-   h1 {
+h1 {
    padding: 3rem 1rem 0rem 1rem;
 }
 #intro {
@@ -58,7 +58,7 @@ main {
 /*** formulaire
    ========================================================================== */
 /* Cacher messages d'erreur */
-.erreur {
+#erreur {
    display: none;
 }
 /* Couleur d'arrière-plan des sections, paddings et style des bordures */

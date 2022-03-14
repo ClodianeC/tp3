@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TP3-Formulaire accessible</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body class="conteneur">
@@ -38,7 +39,7 @@
                             <input type="text" name="nom" id="nom" required pattern="^[A-Za-zÀ-ÿ ,.'-]+$" title="Chaîne de charactères alphabétiques">
                         </p>
                     </div>
-                    <p class="erreur">Avertissement, le prénom ou le nom comporte un ou plusieurs caractères interdits.</p>
+                    <p id="erreur">Avertissement, le prénom ou le nom comporte un ou plusieurs caractères interdits.</p>
                 </fieldset>
 
                 <div id="adresse" class="ctnValidation">
@@ -46,14 +47,14 @@
                         <label for="adresse">Adresse </label>
                         <input type="text" name="adresse" id="adresse" required pattern="^[A-Za-zÀ-ÿ0-9 ,.'-]+$" title="Chaîne de charactères alphanumériques">
                     </p>
-                    <p class="erreur">Avertissement, l'adresse est requise.</p>
+                    <p id="erreur">Avertissement, l'adresse est requise.</p>
                 </div>
                 <div id="ville" class="ctnValidation">
                     <p class="input">
                         <label for="ville">Ville </label>
                         <input type="text" name="ville" id="ville" required pattern="^[A-Za-zÀ-ÿ ,.'-]+$" title="Chaîne de charactères alphabétiques">
                     </p>
-                    <p class="erreur">Avertissement, le nom de la ville comporte un ou plusieurs caractères interdits.</p>
+                    <p id="erreur">Avertissement, le nom de la ville comporte un ou plusieurs caractères interdits.</p>
                 </div>
                 <div id="region" class="ctnValidation">
                    <p>
@@ -126,21 +127,21 @@
                             <option value="WY">Wyoming</option>
                         </select>
                     </p> 
-                    <p class="erreur">Avertissement, la région d'origine doit être précisée.</p>
+                    <p id="erreur">Avertissement, la région d'origine doit être précisée.</p>
                 </div>
                 <div id="code-postal" class="ctnValidation">
                     <p class="input">
                         <label for="code_p">Code postal (X1X 1X1) </label>
                         <input type="text" name="code_p" id="code_p" required pattern="[A-Za-z][0-9][A-Za-z] [0-9][A-Za-z][0-9]" title="Suivant le modèle 'X1X 1X1'">
                     </p>
-                    <p class="erreur">Avertissement, le code postal doit respecter le format X1X 1X1.</p>
+                    <p id="erreur">Avertissement, le code postal doit respecter le format X1X 1X1.</p>
                 </div>
                 <div id="courriel" class="ctnValidation">
                    <p class="input">
                         <label for="courriel">Courriel </label>
                         <input type="email" name="courriel" id="courriel" required>
                     </p>
-                    <p class="erreur">Avertissement, le courriel comporte un ou plusieurs caractères interdits.</p> 
+                    <p id="erreur">Avertissement, le courriel comporte un ou plusieurs caractères interdits.</p> 
                 </div>
                 
 
@@ -157,7 +158,7 @@
                             <input type="number" name="numero" id="numero" required max="9999999">
                         </p>
                     </div>
-                    <p class="erreur">Avertissement, le numéro te téléphone ne doit pas comporter d'espace ou de trait d'union.</p>
+                    <p id="erreur">Avertissement, le numéro te téléphone ne doit pas comporter d'espace ou de trait d'union.</p>
                 </fieldset>
             </fieldset>
 
@@ -193,7 +194,7 @@
                             <input type="number" name="annee" id="annee" required>
                         </p>
                     </div>
-                    <p class="erreur">Avertissement, SVP, entrez une date complète.</p>
+                    <p id="erreur">Avertissement, SVP, entrez une date complète.</p>
                 </fieldset>
                 <fieldset id="question" class="ctnValidation">
                     <legend id="etiquette"><h3>Lequel de ces monuments est un mausolée?</h3></legend>
@@ -234,7 +235,7 @@
                             </li>
                         </ul>
                     </div>
-                    <p class="erreur">Avertissement, veuillez répondre à la question du jour.</p>
+                    <p id="erreur">Avertissement, veuillez répondre à la question du jour.</p>
                 </fieldset>
             </fieldset> 
 
@@ -244,7 +245,7 @@
                         <input type="checkbox" name="lecture_reglements" value="accepte" id="accepte" required>
                         <label for="accepte">J'ai lu et j'accepte <a href="pdf/Reglements-Voyage-De-Reve-Au-Menu.pdf">le règlement du concours</a> et je confirme avoir atteint l'âge de majorité dans ma province de résidence. </label>
                     </p>
-                    <p class="erreur">Avertissement, SVP, acceptez le règlement du concours.</p>
+                    <p id="erreur">Avertissement, SVP, acceptez le règlement du concours.</p>
                 </div>
                 <div id="documentations">
                     <p>

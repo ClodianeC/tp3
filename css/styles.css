@@ -57,10 +57,35 @@ main {
 }
 /*** formulaire
    ========================================================================== */
-/* Cacher messages d'erreur */
+/* Messages d'erreur */
 #erreur {
    display: none;
+   color: red;
 }
+#erreur div {
+   width: 32px;
+   height: 32px;
+   display: inline-block;
+}
+   /* Bien */
+   .good {
+      background: url(../images/good-warning-error.png) ;
+      background-position: 0px 0px;
+   }
+   .good+p {
+      display: none;
+      }
+   /* Erreur */
+   .error {
+      background: url(../images/good-warning-error.png) ;
+      background-position: 32px 0px;
+   }
+   /* Avertissement */
+   .warning {
+      background: url(../images/good-warning-error.png) ;
+      background-position: 64px 0px;
+   }
+
 /* Couleur d'arrière-plan des sections, paddings et style des bordures */
 #contact, 
 #concours {
@@ -139,6 +164,8 @@ select {
    #date p select {
       height: 25px;
    }
+
+/* Styler les messages d'erreur */
 
 /*** interactivité
    ========================================================================== */

@@ -44,6 +44,11 @@ h1 {
 #intro {
    padding: 1rem 1rem 0 1rem;
 }
+@media(min-width: 600px) {
+   #intro {
+      padding: 2rem 1rem 0 1rem;
+   }
+}
 /*** main
    ========================================================================== */
 /* Couleur d'arrière plan générale et du main */
@@ -51,9 +56,13 @@ body {
    background: rgb(147,201,183);
    background: linear-gradient(180deg, rgba(147,201,183,1) 0%, rgba(185,223,195,1) 50%, rgba(251,255,234,1) 100%);
 }
+header {
+   background-color: white;
+}
 main {
    background-color: white;
    box-shadow: 10px 10px 20px #555;
+   max-width: 1000px;
 }
 /*** formulaire
    ========================================================================== */
@@ -120,7 +129,17 @@ main {
 li .image {
    width: 100%;
 }
-
+@media(min-width: 600px) {
+   .item-monuments {
+      max-width: 32%;
+      display: inline-block;
+      padding-bottom: 1rem;
+      vertical-align: top;
+   }
+   /* ul {
+      align-items: top;
+   } */
+}
 
 /* Étiquette sur le dessus des inputs, exception pour la confirmation */
 input, 
@@ -164,8 +183,6 @@ select {
    #date p select {
       height: 25px;
    }
-
-/* Styler les messages d'erreur */
 
 /*** interactivité
    ========================================================================== */

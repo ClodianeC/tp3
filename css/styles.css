@@ -40,10 +40,35 @@
 
 /*** main
    ========================================================================== */
-
+body {
+   background: rgb(147,201,183);
+   background: linear-gradient(180deg, rgba(147,201,183,1) 0%, rgba(185,223,195,1) 50%, rgba(251,255,234,1) 100%);
+}
+main {
+   background-color: white;
+   box-shadow: 10px 10px 20px #555;
+}
 /*** formulaire
    ========================================================================== */
-
+#contact, 
+#concours {
+   background-color: lightgray;
+   border: 0;
+   border-radius: 1rem;
+}
+#contact h2,
+#concours h2 {
+   padding-top: 3.5rem;
+}
+#confirmation {
+   border: 0;
+}
+#nom-complet,
+#telephone,
+#date,
+#question {
+   border-radius: 1rem;
+}
 /*** interactivité
    ========================================================================== */
 

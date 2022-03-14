@@ -57,6 +57,10 @@ main {
 }
 /*** formulaire
    ========================================================================== */
+/* Cacher messages d'erreur */
+.erreur {
+   display: none;
+}
 /* Couleur d'arrière-plan des sections, paddings et style des bordures */
 #contact, 
 #concours {

@@ -110,6 +110,32 @@ select {
    font-weight: bold;
    border: 1px solid #555;
 }
+
+/* Placements des items concernés sur une seule rangée */
+   /* Nom */
+   #nom-complet p {
+      flex-basis: 49%;
+   }
+   /* Téléphone */
+   #telephone p:first-child {
+      flex-basis: 30%;
+   }
+   #telephone p:nth-child(2) {
+      flex-basis: 2%;
+      padding-top: 2rem;
+   }
+   #telephone p:nth-child(3) {
+      flex-basis: 60%;
+   }   
+   /* Date */
+   #date p {
+      flex-basis: 32%;
+   }
+   #date p input,
+   #date p select {
+      height: 25px;
+   }
+
 /*** interactivité
    ========================================================================== */
 /* Interactivité(hover focus selected) des boutons radio de la question du jour */

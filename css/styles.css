@@ -90,8 +90,8 @@ main {
 }
 li .image {
    width: 100%;
-   filter: grayscale(100);
 }
+
 
 /* Étiquette sur le dessus des inputs, exception pour la confirmation */
 input, 
@@ -108,11 +108,24 @@ select {
    border-radius: 1rem;
    padding: 1rem;
    font-weight: bold;
-   border: 0,4rem solid #555;
+   border: 1px solid #555;
 }
 /*** interactivité
    ========================================================================== */
-
+/* Interactivité(hover focus selected) des boutons radio de la question du jour */
+input[type=radio] + label {
+   filter: grayscale(100);
+}
+input[type=radio]:hover + label,
+input[type=radio]:focus + label {
+   filter: grayscale(0);
+}
+input[type=radio]:checked + label {
+   display: block;
+   filter: grayscale(0);
+   padding: 1rem;
+   border: 1.5px solid #000;
+}
 /*** footer
    ========================================================================== */
 /* Style du pied de page */

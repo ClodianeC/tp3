@@ -37,9 +37,16 @@
    ========================================================================== */
 /*** entête
    ========================================================================== */
-
+/* Padding de l'introduction */
+   h1 {
+   padding: 3rem 1rem 0rem 1rem;
+}
+#intro {
+   padding: 1rem 1rem 0 1rem;
+}
 /*** main
    ========================================================================== */
+/* Couleur d'arrière plan générale et du main */
 body {
    background: rgb(147,201,183);
    background: linear-gradient(180deg, rgba(147,201,183,1) 0%, rgba(185,223,195,1) 50%, rgba(251,255,234,1) 100%);
@@ -50,6 +57,7 @@ main {
 }
 /*** formulaire
    ========================================================================== */
+/* Couleur d'arrière-plan des sections, paddings et style des bordures */
 #contact, 
 #concours {
    background-color: lightgray;
@@ -68,9 +76,51 @@ main {
 #date,
 #question {
    border-radius: 1rem;
+   border-width: 0.25rem;
+   border-color: black;
+}
+
+/* Style de la question du jour */
+#monuments {
+   list-style: none;
+   padding: 0;
+}
+.item-monuments {
+   padding-bottom: 3rem;
+}
+li .image {
+   width: 100%;
+   filter: grayscale(100);
+}
+
+/* Étiquette sur le dessus des inputs, exception pour la confirmation */
+input, 
+select {
+   width: 100%;
+}
+#confirmation div p input {
+   width: auto;
+}
+
+/* Style du boutton */
+#soumission button {
+   background-color: rgba(185,223,195);
+   border-radius: 1rem;
+   padding: 1rem;
+   font-weight: bold;
+   border: 0,4rem solid #555;
 }
 /*** interactivité
    ========================================================================== */
 
 /*** footer
    ========================================================================== */
+/* Style du pied de page */
+footer {
+   text-align: center;
+   padding-top: 6rem;
+   padding-bottom: 5rem;
+   font-weight: bold;
+   max-width: 80%;
+   margin: auto;
+}

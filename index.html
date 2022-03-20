@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body class="conteneur">
-    <header id="entete" role="header">
+    <header id="entete" role="banner">
         <picture class="header__picture">
             <source srcset="images/bandeau_600.jpg" media="(max-width:600px)">
             <source srcset="images/bandeau_1200.jpg" media="(min-width:601px)">
@@ -39,10 +39,13 @@
                             <input type="text" name="nom" id="nom" required pattern="^[A-Za-zÀ-ÿ ,.'-]+$" title="Chaîne de charactères alphabétiques">
                         </p>
                     </div>
-                    <div id="erreur">
-                        <div></div>
-                        <p>Avertissement, le prénom ou le nom comporte un ou plusieurs caractères interdits.</p>
-                    </div>
+                    <p class="erreur">
+                        <span>
+                            <span class="screen-reader-only">Avertissement</span>
+                            <span class="icone icone--avertissement" aria-hidden="true"></span>
+                        </span>
+                        Le prénom ou le nom comporte un ou plusieurs caractères interdits.
+                    </p>
                 </fieldset>
 
                 <div id="adresse" class="ctnValidation">
